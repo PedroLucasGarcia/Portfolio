@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     color: #fff;
     text-decoration: none;   /*Tira o undeline*/
     font-family: system-ui, -apple-system, 'Open Sans', Arial, sans-serif;
 }
+
 #logo {
     font-size: 2rem; 
 }
+
 #header {   /*O header inclui a logo e o menu*/
     box-sizing: border-box;   /*Faz com que o height e o padding tenha um valor fixo e não somado*/
     height: 70px;
@@ -19,24 +22,68 @@ a {
     justify-content:space-between;
     background: #06061b;
 }
+
 #menu {
     display: flex;
     list-style: none;   /*Tira o estilo da lista*/
     gap: .5rem;   /*Dá um espaçamento*/
 }
+
 #menu a {
     display: block;
     padding: .5rem;   /*Aumenta a área de contato*/
 }
+
 #botao-menu {
     display: none;
 
 }
+
 @media (max-width: 600px) {   /*Se a página tiver menos que 600px aplicará este estilo*/
     #botao-menu {
         display: block;
     }
     #menu {
         display: none;
+    }
+}
+
+.container {
+    max-width: center;
+    margin: 0 auto;
+    padding: 200px;
+    background-color: #06061b;
+}
+
+.line {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Special Elite', monospace;
+    font-size: 2em;
+    text-align: left;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation {
+    animation: cursor 1000ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 28em;
+    }
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
     }
 }
