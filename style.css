@@ -17,7 +17,7 @@ a {
     display: flex;   /*Fez com que os itens ficassem um ao lado do outro*/
     align-items: center;
     justify-content:space-between;
-    background: #333;
+    background: #06061b;
 }
 #menu {
     display: flex;
