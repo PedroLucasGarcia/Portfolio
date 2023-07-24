@@ -21,7 +21,7 @@ a {
 }
 #menu {
     display: flex;
-    list-style: none;   /*Tira a bolinha da lista*/
+    list-style: none;   /*Tira o estilo da lista*/
     gap: .5rem;   /*Dá um espaçamento*/
 }
 #menu a {
