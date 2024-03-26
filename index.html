@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio | Pedro Lucas</title>
+    <title>Portfólio</title>
+    <!--Icones-->
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #06061b">
-    <header id="header">
-        <a id="logo" href="" title="Voltar a página principal"> PLG </a>
-        <nav id="nav">
-            <button id="botao-menu">Menu</button>
-            <ul id="menu">
-                <li><a href="/">Início</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Portifólio</a></li>
-                <li><a href="/">Contato</a></li>
-            </ul>
+<body>
+    <!--Header-->
+    <header>
+        <!--Navegação para telas grandes-->
+        <nav id="desktop-nav">
+            <!--Logo-->
+            <div class="logo">Pedro Lucas</div>
+            <!--Menu de navegação-->
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#experience">Experiência</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#"><i class="fa-solid fa-moon"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Navegação para telas pequenas e médias-->
+        <nav id="mobile-nav">
+            <!--Logo-->
+            <div class="logo">Pedro Lucas</div>
+            <!--Menu Hamburger-->
+            <div class="hamburger-menu">
+                <!--Icone-->
+                <div class="hamburger-icon" onclick="toggleMenu()"> <!--Chama a função do JavaScript-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                        <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+                        <li><a href="#experience" onclick="toggleMenu()">Experiência</a></li>
+                        <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
+                        <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+                </div>
+            </div>
         </nav>
     </header>
-    <nav>
-        <div class="container">
-            <p class=" text line typing-animation">Olá, Mundo! Eu sou Pedro Lucas, Desenvolvedor Front-End.</p>
-        </div>
-    </nav>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
