@@ -144,6 +144,94 @@ section{
     margin: 0 10rem;
 }
 
+/*Sections*/
+section{
+    padding-top: 4vh;
+    height: 100vh;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container{
+    display: flex;
+    margin: 0 10rem;
+}
+
+/*Section - Início*/
+#profile{
+    display: flex;
+    justify-content: center;
+    height: 83vh;
+}
+/*Icones de mídias socias*/
+.profile-social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5%; 
+}
+.profile-icon{
+    scale: 120%;
+    margin: 15px 0;
+}
+/*texto principal*/
+.profile-text{
+    align-self: center;
+    text-align: center;
+    width: 40%;
+}
+.profile-text-p1{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+.profile-text-p2{
+    font-size: 2.4rem; 
+    color: black;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.profile-text-p3{
+    font-size: 1.6rem; 
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+/*Botões*/
+.profile-text button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin: 0 0.8rem;
+}
+.btn-cv{
+    border: 2px solid black;
+    background-color: white;
+}
+.btn-cv:hover{
+    border: 2px solid gray;
+    color: gray;
+}
+.btn-contact{
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+.btn-contact:hover{
+    background-color: rgb(173, 173, 173);
+    color: black;
+}
+/*Imagem*/
+.profile-img{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+.profile-img img{
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
 
 
 /*Navegação para telas pequenas e médias*/
