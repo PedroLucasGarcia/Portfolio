@@ -232,7 +232,52 @@ section{
     border: 2px solid black;
 }
 
-
+/*Section - Sobre*/
+#about{
+    position: relative;
+}
+.title{
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 2rem 0;
+}
+.section-container{
+    gap: 4rem;
+    height: 80vh;
+}
+.about-details-containers{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-containers{
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.about-icon{
+    scale: 120%;
+}
+.details-containers{
+    padding: 1.5rem;
+    flex: 1;
+    background-color: white;
+    border-radius: 2rem;
+    border: 1px solid gray;
+    text-align: center;
+}
+.about-text{
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.icon-arrow{
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    scale: 120%;
+    padding: .5rem;
+}
 
 /*Navegação para telas pequenas e médias*/
 @media screen and (max-width: 1080px) {
