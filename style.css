@@ -48,7 +48,6 @@ a:hover{
     text-decoration-color: gray;
     text-underline-offset: .5rem;   
 }
-/*Logo*/
 .logo{
     font-size: 1.8rem;
     font-weight: 500;
@@ -144,18 +143,6 @@ section{
     margin: 0 10rem;
 }
 
-/*Sections*/
-section{
-    padding-top: 4vh;
-    height: 100vh;
-    box-sizing: border-box;
-    min-height: fit-content;
-}
-.section-container{
-    display: flex;
-    margin: 0 10rem;
-}
-
 /*Section - Início*/
 #profile{
     display: flex;
@@ -196,29 +183,25 @@ section{
     margin-bottom: 30px;
 }
 /*Botões*/
-.profile-text button{
+button{
     padding: 10px 15px;
     border-radius: 20px;
     font-size: 1.4rem;
     cursor: pointer;
     margin: 0 0.8rem;
 }
-.btn-cv{
+.btn-1{
     border: 2px solid black;
     background-color: white;
 }
-.btn-cv:hover{
+.btn-1:hover{
     border: 2px solid gray;
     color: gray;
 }
-.btn-contact{
+.btn-2{
     border: 2px solid black;
     background-color: black;
     color: white;
-}
-.btn-contact:hover{
-    background-color: rgb(173, 173, 173);
-    color: black;
 }
 /*Imagem*/
 .profile-img{
@@ -253,7 +236,6 @@ section{
 .about-containers{
     display: flex;
     gap: 2rem;
-    margin: 2rem 0;
 }
 .about-icon{
     scale: 120%;
@@ -267,13 +249,14 @@ section{
     text-align: center;
 }
 .about-text{
+    margin-top: 3rem;
     font-size: 1.1rem;
     text-align: center;
     letter-spacing: 1px;
 }
 .icon-arrow{
     position: absolute;
-    left: 50%;
+    left: 49.1%;
     bottom: 3rem;
     scale: 120%;
     padding: .5rem;
@@ -332,6 +315,7 @@ article .icon{
     margin: 1rem;
     color: black;
 }
+
 
 /*Navegação para telas pequenas e médias*/
 @media screen and (max-width: 1080px) {
