@@ -319,6 +319,20 @@ article .icon{
     cursor: default;
 }
 
+/*section - Projetos*/
+#projects{
+    position: relative;
+}
+.project-img{
+    width: 90%;
+    height: 250px;
+    border-radius: 2rem;
+}
+.project-title{
+    margin: 1rem;
+    color: black;
+}
+
 /*Navegação para telas pequenas e médias*/
 @media screen and (max-width: 1080px) {
     #desktop-nav{
