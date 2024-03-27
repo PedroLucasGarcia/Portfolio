@@ -19,12 +19,12 @@ p{
     color: gray;
 }
 
-/*Transições / animações*/
-a, .btn{
-    transition: all 300ms ease;
-}
+/*-----------------------------------*/
 
 /*Navegação para telas grandes*/
+#header{
+    border-bottom: 1px solid gray;
+}
 nav{
     display: flex;
     align-items: center;
@@ -131,7 +131,8 @@ a:hover{
     transform: none;
 }
 
-/*Sections*/
+/*------------------------------*/
+
 section{
     padding-top: 4vh;
     height: 100vh;
@@ -149,6 +150,10 @@ section{
     justify-content: center;
     height: 83vh;
 }
+#profile-mobile{
+    display: none;
+}
+
 /*Icones de mídias socias*/
 .profile-social{
     display: flex;
@@ -217,39 +222,28 @@ button{
 
 /*Section - Sobre*/
 #about{
+    padding-top: 4vh;
     position: relative;
 }
 .title{
     text-align: center;
     font-size: 2.2rem;
-    padding: 2rem 0;
+    
 }
-.section-container{
-    gap: 4rem;
-    height: 80vh;
-}
-.about-details-containers{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.about-containers{
-    display: flex;
-    gap: 2rem;
+.containers{
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    border: 1px solid gray;
+    border-radius: 2rem;
+    text-align: center;
+    width: 50%;
 }
 .about-icon{
     scale: 120%;
 }
-.details-containers{
-    padding: 1.5rem;
-    flex: 1;
-    background-color: white;
-    border-radius: 2rem;
-    border: 1px solid gray;
-    text-align: center;
-}
-.about-text{
-    margin-top: 3rem;
+.text{
+    display: flex;
+    margin: 0 10rem;
     font-size: 1.1rem;
     text-align: center;
     letter-spacing: 1px;
@@ -264,15 +258,10 @@ button{
 
 /*section - Experiência*/
 #experience{
+    padding-top: 4vh;
     position: relative;
 }
-.experience-details-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 10rem;
-}
-.experience-sub-title{
+.sub-title{
     color: black;
     font-weight: 600;
     font-size: 1.75rem;
@@ -298,12 +287,10 @@ article h3, article p{
 article .icon{
     scale: 130%;
 }
-.article .icon-arrow{
-    cursor: default;
-}
 
 /*section - Projetos*/
 #projects{
+    padding-top: 4vh;
     position: relative;
 }
 .project-img{
@@ -316,13 +303,142 @@ article .icon{
     color: black;
 }
 
+/*section - Contato*/
+#contact{
+    padding-top: 10vh;
+    position: relative;
+}
+#contact .containers{
+    width: auto;
+    margin: 3rem auto;
+    padding: 3rem;
+}
+.contact-email, .contact-linkedin{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.contact-phone{
+    display: flex;
+    align-items: center;
+}
+.contact-icon{
+    scale: 150%;
+    margin-right: 1rem;
+}
+
+/*footer*/
+footer{
+    border-top: 1px solid gray;
+    height: 17vh;
+    text-align: center;
+}
+.footer-copy{
+    padding-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .containers{
+        flex-wrap: wrap;
+    }
+}
 
 /*Navegação para telas pequenas e médias*/
 @media screen and (max-width: 1080px) {
+    a, p{
+        font-size: 1rem;
+    }
     #desktop-nav{
         display: none;
     }
     #mobile-nav{
         display: flex;
+    }
+    #profile{
+        display: none;
+    }
+    #profile-mobile{
+        display: flex;
+    }
+    #profile-mobile, .section-container{
+        display: block;
+    }
+    .profile-text-p1, .profile-text-p3{
+        font-size: 1.4rem;
+    }
+    
+    .profile-social{
+        width: 100%;
+        flex-direction: row;
+    }
+    .profile-social i{
+        padding: 1rem;
+    }
+    .profile-text{
+        width: 100%;
+    }
+    .profile-img{
+        width: 300px;
+        height: 300px;
+        margin: 2rem auto;
+    }
+    .containers{
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 1rem;
+    }
+    .icon-arrow{
+        display: none;
+    }
+    section, .section-container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;   
+    }
+    .section-container{
+        margin: 0
+    }
+    .about-icon, .contact-icon, .profile-icon{
+        scale: 100%;
+    }
+    .text{
+        display: block;
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .title{
+        font-size: 1.8rem;
+    }
+    .sub-title{
+        font-size: 1.4rem;
+    }
+    .project-img{
+        width: 100%;
+        height: auto;
+    }
+    #contact .containers{
+        width: 90%;
+        padding: 1rem;
+        margin: 2rem auto 4rem auto;
+    }
+    footer nav {
+        display: none;
+    }
+    footer{
+        height: auto;
+    }
+    .footer-copy{
+        margin: 1rem;
+        text-align: center;
+        padding: 0;
     }
 }
