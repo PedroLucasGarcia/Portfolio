@@ -279,6 +279,46 @@ section{
     padding: .5rem;
 }
 
+/*section - Experiência*/
+#experience{
+    position: relative;
+}
+.experience-details-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10rem;
+}
+.experience-sub-title{
+    color: black;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+}
+article{
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+article h3, article p{
+    padding: 0 8px;
+}
+article .icon{
+    scale: 130%;
+}
+.article .icon-arrow{
+    cursor: default;
+}
+
 /*Navegação para telas pequenas e médias*/
 @media screen and (max-width: 1080px) {
     #desktop-nav{
