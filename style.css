@@ -273,7 +273,8 @@ button{
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: baseline;
+    padding: auto;
 }
 article{
     display: flex;
@@ -282,7 +283,7 @@ article{
     gap: 0.5rem;
 }
 article h3, article p{
-    padding: 0 8px;
+    padding: 0 8px;  
 }
 article .icon{
     scale: 130%;
