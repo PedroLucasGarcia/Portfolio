@@ -507,3 +507,11 @@ footer{
         height: fit-content;
     }
 }
+
+@media (min-width: 1400.1px) {
+    .project-img{
+        width: 90%;
+        height: 350px;
+        border-radius: 2rem;
+    }
+}
