@@ -236,7 +236,7 @@ button{
     border: 1px solid gray;
     border-radius: 2rem;
     text-align: center;
-    width: 50%;
+    width: 50%; 
 }
 .about-icon{
     scale: 120%;
@@ -290,10 +290,11 @@ article .icon{
 }
 
 /*section - Projetos*/
-#projects{
+#projects {
     padding-top: 4vh;
     position: relative;
 }
+
 .project-img{
     width: 90%;
     height: 250px;
@@ -508,10 +509,10 @@ footer{
     }
 }
 
-@media (min-width: 1400.1px) {
+@media (min-width: 1300.1px) {
     .project-img{
         width: 90%;
-        height: 350px;
+        height: 250px;
         border-radius: 2rem;
     }
 }
