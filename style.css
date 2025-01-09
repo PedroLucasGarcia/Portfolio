@@ -511,7 +511,7 @@ footer{
 
 @media (min-width: 1300.1px) {
     .project-img{
-        width: 90%;
+        width: 100%;
         height: 250px;
         border-radius: 2rem;
     }
