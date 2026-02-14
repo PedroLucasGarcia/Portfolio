@@ -63,8 +63,8 @@
         <div class="profile-text">
             <p class="profile-text-p1">Olá! Eu sou</p>
             <p class="profile-text-p2">Pedro Lucas Garcia</p>
-            <p class="profile-text-p3">Desenvolvedor Front-End</p>
-            <button class="btn-1" title="Currículo" onclick="window.open('./assets/curriculo.pdf')">Currículo</button>
+            <!--<p class="profile-text-p3">Desenvolvedor Front-End</p>-->
+            <button class="btn-1" title="Currículo" onclick="window.open('./assets/CV.pdf')">Currículo</button>
             <button class="btn-2" title="Contate-me" onclick="location.href='#contact'">Contate-me</button>
         </div>
         <!--Foto-->
@@ -100,30 +100,77 @@
         <h1 class="title">Sobre Mim</h1>
         <div class="section-container">
             <div class="containers">
-                <i class="fa-solid fa-graduation-cap about-icon"></i>
+                <div class="details-containers">
+                    <i class="fa-solid fa-graduation-cap about-icon"></i>
                     <h3>Educação</h3>
-                    <p>Graduação em Análise e   <br>
-                    Desenvolvimento de Sistemas   <br>
-                    - Universidade Cesumar</p>
+                    <p>Técnico Especialista em Gestão de Informação e Ciência dos Dados</p> 
+                    <br>
+                    <p>Instituto de Emprego e Formação Profissional (IEFP)</p>
+                </div>
             </div>
             <div class="containers">
                 <div class="details-containers">
                     <i class="fa-solid fa-graduation-cap about-icon"></i>
                     <h3>Educação</h3>
-                    <p>Desenvolvimento Web  <br>
-                    - Udemy</p>
+                    <p>Graduação em Análise e Desenvolvimento de Sistemas</p>
+                    <br>
+                    <p>Universidade Cesumar</p>
+                </div>
+            </div>
+            <div class="containers">
+                <div class="details-containers">
+                    <i class="fa-solid fa-graduation-cap about-icon"></i>
+                    <h3>Educação</h3>
+                    <p>Desenvolvimento Web</p>
+                    <br>
+                    <p>Udemy</p>
                 </div>
             </div>
         </div>
-        <div class="text"><p>Formado em 2024, sou um desenvolvedor frontend apaixonado pela tecnologia e constantemente em busca de novas oportunidades de crescimento. Destaco-me na criação de interfaces atraentes e intuitivas. Minha especialização como desenvolvedor frontend me permite traduzir conceitos de design em experiências de usuário memoráveis. Com uma base sólida em desenvolvimento de software, estou ansioso para contribuir e crescer profissionalmente em projetos desafiadores que me permitam aplicar e aprimorar minhas habilidades no desenvolvimento frontend.</p></div>
-
-        <a href="#experience"><i class="fa-solid fa-arrow-down icon-arrow"></i></a>
-    </section>
+        <div class="text">
+            <p>Atualmente, frequento o curso de Técnico Especialista em Gestão de Informação e Ciência dos Dados (Nível 5) e procuro um estágio curricular para aplicar os conhecimentos adquiridos e contribuir para os objetivos da empresa, enquanto desenvolvo as minhas competências profissionais.
+            Sou formado em Análise e Desenvolvimento de Sistemas (2024), com formação adicional em Desenvolvimento Web, especialmente na área de frontend, destacando-me na criação de interfaces modernas e intuitivas.
+            Estou motivado para integrar projetos desafiadores que me permitam evoluir nas áreas de Ciência de Dados e Desenvolvimento Web, com dedicação, responsabilidade e vontade contínua de aprender.</p>
+        </div>
+        </section>
 
     <!--Section - Experiência-->
     <section id="experience">
         <h1 class="title">Experiência</h1>
         <div class="section-container">
+            <div class="containers">
+                <h2 class="sub-title">Ciências de Dados</h2>
+                <div class="article-container">
+                    <article>
+                        <i class="fa-solid fa-circle-check icon"></i>
+                        <div>
+                            <h3>Python</h3>
+                            <p>Intermediário</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-circle-check icon"></i>
+                        <div>
+                            <h3>SQL</h3>
+                            <p>Intermediário</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-circle-check icon"></i>
+                        <div>
+                            <h3>Power BI</h3>
+                            <p>Intermediário</p>
+                        </div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-circle-check icon"></i>
+                        <div>
+                            <h3>Excel</h3>
+                            <p>Intermediário</p>
+                        </div>
+                    </article>
+                </div>      
+            </div>
             <div class="containers">
                 <h2 class="sub-title">Desenvolvimento Frontend</h2>
                 <div class="article-container">
@@ -148,36 +195,9 @@
                             <p>Básico</p>
                         </div>
                     </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>BootStrap 4</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
                 </div>      
             </div>
-            <div class="containers">
-                <h2 class="sub-title">Desenvolvimento Backend</h2>
-                <div class="article-container">
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>Java</h3>
-                            <p>Básico</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>Git</h3>
-                            <p>Básico</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
         </div>
-        <a href="#projects"><i class="fa-solid fa-arrow-down icon-arrow"></i></a>
     </section>
 
     <!--Section - Projetos-->
@@ -185,38 +205,43 @@
         <h1 class="title">Projetos</h1>
         <div class="section-container">
             <div class="containers">
-                <div>
-                    <img src="./assets/cardapio.png" alt="Projeto 1" class="project-img">
-                </div>
-                <h2 class="sub-title project-title">Projeto 1</h2>
-                <div>
-                    <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/Projeto-Cardapio'" title="GitHub">GitHub</button>
-                    <button class="btn-1" onclick="location.href='https://projeto-cardapio-wheat.vercel.app'" title="Projeto">Projeto</button>
-                </div>
-            </div>
-            <div class="containers">
-                <div>
-                    <img src="./assets/login page.png" alt="Projeto 2" class="project-img">
-                </div>
-                <h2 class="sub-title project-title">Projeto 2</h2>
-                <div>
-                    <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/LoginPage'" title="GitHub">GitHub</button>
-                    <button class="btn-1" onclick="location.href='https://login-page-nine-theta.vercel.app'" title="Projeto">Projeto</button>
+                <div class="details-containers">
+                    <div>
+                    <img src="./assets/eletroPoint.png" alt="Projeto 1" class="project-img">
+                    </div>
+                    <h2 class="sub-title project-title">Projeto 1</h2>
+                    <div>
+                        <button class="btn-2" onclick="location.href='https://eletro-point.vercel.app/portateis/portatil-samsung.html'" title="GitHub">GitHub</button>
+                        <button class="btn-1" onclick="location.href='https://eletro-point.vercel.app'" title="Projeto">Projeto</button>
+                    </div>
                 </div>
             </div>
             <div class="containers">
-                <div>
-                    <img src="./assets/orcamento pessoal.png" alt="Projeto 3" class="project-img">
+                <div class="details-containers">
+                    <div>
+                        <img src="./assets/ConceitoeTendencia.png" alt="Projeto 2" class="project-img">
+                    </div>
+                    <h2 class="sub-title project-title">Projeto 2</h2>
+                    <div>
+                        <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/SalaoDeBeleza'" title="GitHub">GitHub</button>
+                        <button class="btn-1" onclick="location.href='https://salao-de-beleza-eight-pi.vercel.app'" title="Projeto">Projeto</button>
+                    </div>
                 </div>
-                <h2 class="sub-title project-title">Projeto 3</h2>
-                <div>
-                    <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/AppOrcamentoPessoal'" title="GitHub">GitHub</button>
-                    <button class="btn-1" onclick="location.href='https://app-orcamento-pessoal-beta.vercel.app/consulta.html'" title="Projeto">Projeto</button>
+            </div>
+            <div class="containers">
+                <div class="details-containers">
+                    <div>
+                        <img src="./assets/app-orcamento-pessoal.png" alt="Projeto 3" class="project-img">
+                    </div>
+                    <h2 class="sub-title project-title">Projeto 3</h2>
+                    <div>
+                        <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/AppOrcamentoPessoal'" title="GitHub">GitHub</button>
+                        <button class="btn-1" onclick="location.href='https://app-orcamento-pessoal-beta.vercel.app'" title="Projeto">Projeto</button>
+                    </div>
                 </div>
             </div>
             
         </div>
-        <a href="#contact"><i class="fa-solid fa-arrow-down icon-arrow"></i></a>
     </section>
 
     <!--Section - Contato-->
@@ -225,8 +250,8 @@
         <div class="section-container">
             <div class="containers contact-container">
                 <div class="contact-email">
-                    <a href="mailto:pedro.luc.garcia@gmail.com" title="Email" target="_blank"><i class="fa-solid fa-envelope contact-icon"></i></a>
-                    <a href="mailto:pedro.luc.garcia@gmail.com" title="Email" target="_blank">pedro.luc.garcia@gmail.com</a>
+                    <a href="mailto:pedrolucasdasilvagarcia@gmail.com" title="Email" target="_blank"><i class="fa-solid fa-envelope contact-icon"></i></a>
+                    <a href="mailto:pedrolucasdasilvagarcia@gmail.com" title="Email" target="_blank">pedrolucasdasilvagarcia@gmail.com</a>
                 </div>
                 <div class="contact-linkedin">
                     <a href="https://linkedin.com/in/pedro-lucas-garcia/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
@@ -234,11 +259,10 @@
                 </div>
                 <div class="contact-phone">
                     <a href="tel://21920026621" title="Telefone"><i class="fa-solid fa-phone contact-icon" title="Telefone"></i></a>
-                    <a href="tel://21920026621" title="Telefone">(21) 92002-6621</a>
+                    <a href="tel://21920026621" title="Telefone">+351 938 553 771</a>
                 </div>
             </div>
         </div>
-        <a href="#header"><i class="fa-solid fa-arrow-up icon-arrow"></i></a>
     </section>
 
     <!--Footer-->
@@ -252,12 +276,12 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
-        <p class="footer-copy">Copyright &#169; 2024 Pedro Lucas, Todos os direitos reservados</p>
+        <p class="footer-copy">Copyright &#169; 2026 Pedro Lucas, Todos os direitos reservados</p>
     </footer>
 
     <!--Footer - Mobile-->
     <footer id="footer-mobile">
-        <p class="footer-copy">Copyright &#169; 2024 Pedro Lucas, Todos os direitos reservados</p>
+        <p class="footer-copy">Copyright &#169; 2026 Pedro Lucas, Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>

@@ -19,17 +19,23 @@ p{
     color: gray;
 }
 
-/*-----------------------------------*/
+/*********************************************************************************************/
 
 /*Navegação para telas grandes*/
 #header{
     border-bottom: 1px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 17vh;
+    height: 10vh;
 }
 /*Menu de navegação*/
 .nav-links{
@@ -131,11 +137,10 @@ a:hover{
     transform: none;
 }
 
-/*------------------------------*/
+/*********************************************************************************************/
 
 section{
     padding-top: 4vh;
-    height: 100vh;
     box-sizing: border-box;
     min-height: fit-content;
 }
@@ -144,11 +149,13 @@ section{
     margin: 0 10rem;
 }
 
+/*********************************************************************************************/
+
 /*Section - Início*/
 #profile{
     display: flex;
     justify-content: center;
-    height: 83vh;
+    height: 100vh;
 }
 #profile-mobile{
     display: none;
@@ -220,9 +227,11 @@ button{
     border: 2px solid black;
 }
 
+/*********************************************************************************************/
+
 /*Section - Sobre*/
 #about{
-    padding-top: 4vh;
+    padding: 1rem 0 4rem 0;
     position: relative;
 }
 .title{
@@ -244,7 +253,7 @@ button{
 .text{
     display: flex;
     margin: 0 10rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -255,10 +264,15 @@ button{
     scale: 120%;
     padding: .5rem;
 }
+#about p{
+    padding-top: 1rem;
+}
+
+/*********************************************************************************************/
 
 /*section - Experiência*/
 #experience{
-    padding-top: 4vh;
+    padding: 1rem 0 4rem 0;
     position: relative;
 }
 .sub-title{
@@ -289,15 +303,17 @@ article .icon{
     scale: 130%;
 }
 
+/*********************************************************************************************/
+
 /*section - Projetos*/
 #projects {
-    padding-top: 4vh;
+    padding: 1rem 0 4rem 0;
     position: relative;
 }
 
 .project-img{
-    width: 90%;
-    height: 250px;
+    max-width: 300px;
+    max-height: 200px;
     border-radius: 2rem;
 }
 .project-title{
@@ -305,11 +321,12 @@ article .icon{
     color: black;
 }
 
+/*********************************************************************************************/
+
 /*section - Contato*/
 #contact{
-    padding-top: 4vh;
+    padding: 1rem 0 4rem 0;
     position: relative;
-    height: 78vh;
 }
 #contact .containers{
     width: auto;
@@ -331,6 +348,8 @@ article .icon{
     margin-right: 1rem;
 }
 
+/*********************************************************************************************/
+
 /*footer*/
 #footer-mobile{
     display: none;
@@ -344,6 +363,7 @@ footer{
     padding-bottom: 1rem;
 }
 
+/*********************************************************************************************/
 
 @media screen and (max-width: 1400px) {
     #profile{
