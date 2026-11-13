@@ -790,7 +790,7 @@ input[type="text"], input[type="email"], input[type="search"], input:not([type])
 }
 
 /* ---------- Language picker ---------- */
-.lang-pick { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 10px; border: none; padding: 0; }
+.lang-pick { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 10px; border: none; padding: 0; }
 .lang-pick .field-row { margin: 0; }
 .lang-pick label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .flag { display: inline-block; width: 21px; height: 14px; border: 1px solid #000; flex: none; }
