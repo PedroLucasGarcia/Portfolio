@@ -1,289 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Lucas - Portfólio</title>
-    <!--Icones-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PedroOS 98 — Pedro Lucas Garcia</title>
+  <meta name="description" content="Portfólio de Pedro Lucas Garcia, desenvolvedor web e estudante de Ciência dos Dados, num ambiente de trabalho ao estilo dos anos 90.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.20/dist/98.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=VT323&display=swap">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-    <!--Header-->
-    <header id="header">
-        <!--Navegação para telas grandes-->
-        <nav id="desktop-nav">
-            <!--Logo-->
-            <div class="logo">Pedro Lucas</div>
-            <!--Menu de navegação-->
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#experience">Experiência</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                    <!--<li><a href="#"><i class="fa-solid fa-moon"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>-->
-                </ul>
-            </div>
-        </nav>
 
-        <!--Navegação para telas pequenas e médias-->
-        <nav id="mobile-nav">
-            <!--Logo-->
-            <div class="logo">Pedro Lucas</div>
-            <!--Menu Hamburger-->
-            <div class="hamburger-menu">
-                <!--Icone-->
-                <div class="hamburger-icon" onclick="toggleMenu()"> <!--Chama a função do JavaScript-->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                        <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
-                        <li><a href="#experience" onclick="toggleMenu()">Experiência</a></li>
-                        <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
-                        <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- 1. Arranque estilo BIOS -->
+  <section id="bios" class="screen bios" aria-label="A arrancar o PedroOS 98" data-i18n-attr="aria-label:aBoot">
+    <div class="bios-head">
+      <span class="bios-logo" data-ico="computer"></span>
+      <div>
+        <p class="hi">PedroBIOS v4.98PG</p>
+        <p>Copyright (C) 2026, Pedro Lucas Garcia</p>
+      </div>
+    </div>
+    <pre id="bios-log" aria-live="polite"></pre>
+    <p class="bios-foot" data-i18n="biosFoot">Prima qualquer tecla ou clique para saltar o arranque</p>
+  </section>
 
-    <!--Section - Início-->
-    <section id="profile">
-        <!--Mídias sociais-->
-        <div class="profile-social">
-            <a href="https://github.com/PedroLucasGarcia" target="_blank"><i class="fa-brands fa-github profile-icon" title="GitHub"></i></a>
-            <a href="https://linkedin.com/in/pedro-lucas-garcia/" target="_blank"><i class="fa-brands fa-linkedin-in profile-icon" title="LinkedIn"></i></a>
-            <a href="https://www.instagram.com/_pedrolucasgarcia/" target="_blank"><i class="fa-brands fa-instagram profile-icon" title="Instagram"></i></a>
+  <!-- 2. Diálogo de carregamento -->
+  <section id="splash" class="screen splash" aria-label="A carregar" data-i18n-attr="aria-label:aLoading" hidden>
+    <div class="window load-win">
+      <div class="title-bar">
+        <div class="title-bar-text"><span data-ico="computer" data-size="16"></span><span>PedroOS 98</span></div>
+        <div class="title-bar-controls"><button aria-label="Close" tabindex="-1" disabled></button></div>
+      </div>
+      <div class="window-body">
+        <div class="load-anim" aria-hidden="true">
+          <span data-ico="folder" data-size="40"></span>
+          <span class="load-papers"><i></i><i></i><i></i></span>
+          <span data-ico="computer" data-size="40"></span>
         </div>
-        <!--Principal-->
-        <div class="profile-text">
-            <p class="profile-text-p1">Olá! Eu sou</p>
-            <p class="profile-text-p2">Pedro Lucas Garcia</p>
-            <!--<p class="profile-text-p3">Desenvolvedor Front-End</p>-->
-            <button class="btn-1" title="Currículo" onclick="window.open('./assets/CV.pdf')">Currículo</button>
-            <button class="btn-2" title="Contate-me" onclick="location.href='#contact'">Contate-me</button>
-        </div>
-        <!--Foto-->
-        <div class="profile-img">
-            <img src="./assets/profile-img.jpeg" alt="Pedro Lucas - Imagem">
-        </div>
-    </section>
+        <p class="load-title" data-i18n="loadTitle">A carregar o portfólio…</p>
+        <p id="splash-status" class="load-status" data-i18n="loadStatus">Estado: A iniciar…</p>
+        <div class="seg-bar" role="progressbar" aria-label="A carregar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-i18n-attr="aria-label:aLoading"><span id="splash-fill"></span></div>
+        <div class="btns right"><button id="load-cancel" class="b98" data-i18n="cancel">Cancelar</button></div>
+      </div>
+    </div>
+  </section>
 
-    <!--Section - Início - Mobile-->
-    <section id="profile-mobile">
-        <!--Foto-->
-        <div class="profile-img">
-            <img src="./assets/profile-img.jpeg" alt="Pedro Lucas - Imagem">
+  <!-- 3. Ecrã de boas-vindas com o botão Iniciar -->
+  <section id="login" class="screen login" hidden>
+    <div class="window login-win">
+      <div class="title-bar">
+        <div class="title-bar-text"><span data-ico="computer" data-size="16"></span><span data-i18n="welcomeTitle">Bem-vindo ao PedroOS 98</span></div>
+      </div>
+      <div class="window-body">
+        <div class="login-body">
+          <span class="sunken login-photo"><img src="assets/profile-img.jpeg" alt="Fotografia de Pedro Lucas Garcia" data-i18n-attr="alt:aPhoto"></span>
+          <div>
+            <h1>Pedro Lucas Garcia</h1>
+            <p data-i18n="loginRole">Desenvolvedor web &amp; estudante de Ciência dos Dados.</p>
+            <p data-i18n="loginHint">Clique em <b>Iniciar</b> para entrar no meu portfólio.</p>
+          </div>
         </div>
-        <!--Principal-->
-        <div class="profile-text">
-            <p class="profile-text-p1">Olá! Eu sou</p>
-            <p class="profile-text-p2">Pedro Lucas Garcia</p>
-            <p class="profile-text-p3">Desenvolvedor Front-End</p>
-            <button class="btn-1" title="Currículo" onclick="window.open('./assets/curriculo.pdf')">Currículo</button>
-            <button class="btn-2" title="Contate-me" onclick="location.href='#contact'">Contate-me</button>
+        <fieldset class="lang-pick" data-i18n-attr="aria-label:aLang">
+          <legend data-i18n="langLegend">Idioma</legend>
+          <div class="field-row"><input type="radio" id="lang-pt" name="lang" value="pt"><label for="lang-pt"><span class="flag flag-pt" aria-hidden="true"></span>Português</label></div>
+          <div class="field-row"><input type="radio" id="lang-en" name="lang" value="en"><label for="lang-en"><span class="flag flag-en" aria-hidden="true"></span>English</label></div>
+          <div class="field-row"><input type="radio" id="lang-es" name="lang" value="es"><label for="lang-es"><span class="flag flag-es" aria-hidden="true"></span>Español</label></div>
+        </fieldset>
+        <div class="login-actions">
+          <a href="classico/" data-i18n="classicLink">Prefere a versão clássica?</a>
+          <button id="login-start" class="b98 primary btn-start-big"><span data-ico="computer" data-size="20"></span><span data-i18n="start">Iniciar</span></button>
         </div>
-        <!--Mídias sociais-->
-        <div class="profile-social">
-            <a href="https://github.com/PedroLucasGarcia" target="_blank"><i class="fa-brands fa-github profile-icon" title="GitHub"></i></a>
-            <a href="https://linkedin.com/in/pedro-lucas-garcia/" target="_blank"><i class="fa-brands fa-linkedin-in profile-icon" title="LinkedIn"></i></a>
-            <a href="https://www.instagram.com/_pedrolucasgarcia/" target="_blank"><i class="fa-brands fa-instagram profile-icon" title="Instagram"></i></a>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!--Section - Sobre-->
-    <section id="about">
-        <h1 class="title">Sobre Mim</h1>
-        <div class="section-container">
-            <div class="containers">
-                <div class="details-containers">
-                    <i class="fa-solid fa-graduation-cap about-icon"></i>
-                    <h3>Educação</h3>
-                    <p>Técnico Especialista em Gestão de Informação e Ciência dos Dados</p> 
-                    <br>
-                    <p>Instituto de Emprego e Formação Profissional (IEFP)</p>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="details-containers">
-                    <i class="fa-solid fa-graduation-cap about-icon"></i>
-                    <h3>Educação</h3>
-                    <p>Graduação em Análise e Desenvolvimento de Sistemas</p>
-                    <br>
-                    <p>Universidade Cesumar</p>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="details-containers">
-                    <i class="fa-solid fa-graduation-cap about-icon"></i>
-                    <h3>Educação</h3>
-                    <p>Desenvolvimento Web</p>
-                    <br>
-                    <p>Udemy</p>
-                </div>
-            </div>
-        </div>
-        <div class="text">
-            <p>Atualmente, frequento o curso de Técnico Especialista em Gestão de Informação e Ciência dos Dados (Nível 5) e procuro um estágio curricular para aplicar os conhecimentos adquiridos e contribuir para os objetivos da empresa, enquanto desenvolvo as minhas competências profissionais.
-            Sou formado em Análise e Desenvolvimento de Sistemas (2024), com formação adicional em Desenvolvimento Web, especialmente na área de frontend, destacando-me na criação de interfaces modernas e intuitivas.
-            Estou motivado para integrar projetos desafiadores que me permitam evoluir nas áreas de Ciência de Dados e Desenvolvimento Web, com dedicação, responsabilidade e vontade contínua de aprender.</p>
-        </div>
-        </section>
+  <!-- 4. Ambiente de trabalho -->
+  <main id="desktop" class="desktop" hidden>
+    <h1 class="visually-hidden" data-i18n="desktopH1">Ambiente de trabalho do portfólio de Pedro Lucas Garcia</h1>
+    <div id="icons" class="desktop-icons" role="list" aria-label="Ícones do ambiente de trabalho" data-i18n-attr="aria-label:aIcons"></div>
+    <p class="wallpaper-tag" data-i18n="wallTag">PedroOS 98 · Portfólio de Pedro Lucas Garcia<br>Duplo clique num ícone para abrir</p>
 
-    <!--Section - Experiência-->
-    <section id="experience">
-        <h1 class="title">Experiência</h1>
-        <div class="section-container">
-            <div class="containers">
-                <h2 class="sub-title">Ciências de Dados</h2>
-                <div class="article-container">
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>Python</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>SQL</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>Power BI</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>Excel</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                </div>      
-            </div>
-            <div class="containers">
-                <h2 class="sub-title">Desenvolvimento Frontend</h2>
-                <div class="article-container">
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>HTML</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>CSS</h3>
-                            <p>Intermediário</p>
-                        </div>
-                    </article>
-                    <article>
-                        <i class="fa-solid fa-circle-check icon"></i>
-                        <div>
-                            <h3>JavaScript</h3>
-                            <p>Básico</p>
-                        </div>
-                    </article>
-                </div>      
-            </div>
-        </div>
-    </section>
+    <aside id="sticky" class="sticky" aria-label="Nota: começa aqui" data-i18n-attr="aria-label:aSticky" hidden>
+      <button class="sticky-x" data-close-sticky aria-label="Fechar nota" data-i18n-attr="aria-label:aCloseNote">×</button>
+      <b data-i18n="stickyHead">COMEÇA AQUI</b>
+      <ol>
+        <li><button class="linkish" data-open="projects" data-i18n="sticky1">Vê os projetos</button></li>
+        <li><button class="linkish" data-open="cv" data-i18n="sticky2">Lê o currículo</button></li>
+        <li><button class="linkish" data-open="contact" data-i18n="sticky3">Diz olá</button></li>
+      </ol>
+      <p><span data-i18n="stickyPsst">psst… experimenta a</span> <button class="linkish" data-open="trash" data-i18n="stickyTrash">Lixeira</button></p>
+    </aside>
 
-    <!--Section - Projetos-->
-    <section id="projects">
-        <h1 class="title">Projetos</h1>
-        <div class="section-container">
-            <div class="containers">
-                <div class="details-containers">
-                    <div>
-                    <img src="./assets/eletroPoint.png" alt="Projeto 1" class="project-img">
-                    </div>
-                    <h2 class="sub-title project-title">Projeto 1</h2>
-                    <div>
-                        <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/EletroPoint-Ecommerce'" title="GitHub">GitHub</button>
-                        <button class="btn-1" onclick="location.href='https://eletropoint.vercel.app'" title="Projeto">Projeto</button>
-                    </div>
-                </div>
-            </div>
-            <div class="containers">
-                <div class="details-containers">
-                    <div>
-                        <img src="./assets/ConceitoeTendencia.png" alt="Projeto 2" class="project-img">
-                    </div>
-                    <h2 class="sub-title project-title">Projeto 2</h2>
-                    <div>
-                        <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/SalaoDeBeleza'" title="GitHub">GitHub</button>
-                        <button class="btn-1" onclick="location.href='https://salao-de-beleza-eight-pi.vercel.app'" title="Projeto">Projeto</button>
-                    </div>
-                </div>
-            </div>
-            <!--<div class="containers">
-                <div class="details-containers">
-                    <div>
-                        <img src="./assets/app-orcamento-pessoal.png" alt="Projeto 3" class="project-img">
-                    </div>
-                    <h2 class="sub-title project-title">Projeto 3</h2>
-                    <div>
-                        <button class="btn-2" onclick="location.href='https://github.com/PedroLucasGarcia/AppOrcamentoPessoal'" title="GitHub">GitHub</button>
-                        <button class="btn-1" onclick="location.href='https://app-orcamento-pessoal-beta.vercel.app'" title="Projeto">Projeto</button>
-                    </div>
-                </div>
-            </div>-->
-            
-        </div>
-    </section>
+    <div id="windows" class="windows"></div>
 
-    <!--Section - Contato-->
-    <section id="contact">
-        <h1 class="title">Contato</h1>
-        <div class="section-container">
-            <div class="containers contact-container">
-                <div class="contact-email">
-                    <a href="mailto:pedrolucasdasilvagarcia@gmail.com" title="Email" target="_blank"><i class="fa-solid fa-envelope contact-icon"></i></a>
-                    <a href="mailto:pedrolucasdasilvagarcia@gmail.com" title="Email" target="_blank">pedrolucasdasilvagarcia@gmail.com</a>
-                </div>
-                <div class="contact-linkedin">
-                    <a href="https://linkedin.com/in/pedro-lucas-garcia/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in contact-icon"></i></a>
-                    <a href="https://linkedin.com/in/pedro-lucas-garcia/" title="LinkedIn" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-phone">
-                    <a href="tel://21920026621" title="Telefone"><i class="fa-solid fa-phone contact-icon" title="Telefone"></i></a>
-                    <a href="tel://21920026621" title="Telefone">+351 938 553 771</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="start-menu" class="window start-menu" role="menu" aria-label="Menu Iniciar" data-i18n-attr="aria-label:aStartMenu" hidden>
+      <div class="start-band"><span><b>PedroOS</b> 98</span></div>
+      <ul id="start-list"></ul>
+    </div>
 
-    <!--Footer-->
-    <footer id="footer">
-        <nav class="desktop-nav">
-            <ul class="nav-links">
-                <li><a href="#header">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-        <p class="footer-copy">Copyright &#169; 2026 Pedro Lucas, Todos os direitos reservados</p>
+    <footer class="taskbar">
+      <button id="start-btn" class="start-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="start-menu">
+        <span data-ico="computer" data-size="16"></span><span data-i18n="start">Iniciar</span>
+      </button>
+      <span class="task-sep" aria-hidden="true"></span>
+      <div class="quick" aria-label="Iniciação rápida" data-i18n-attr="aria-label:aQuick">
+        <button class="qbtn" data-open="projects" title="Projetos" aria-label="Projetos" data-i18n-attr="title:aProjects;aria-label:aProjects"><span data-ico="folder" data-size="16"></span></button>
+        <button class="qbtn" data-open="contact" title="Contacto" aria-label="Contacto" data-i18n-attr="title:aContact;aria-label:aContact"><span data-ico="mail" data-size="16"></span></button>
+        <button class="qbtn" data-href="https://github.com/PedroLucasGarcia" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></button>
+        <button class="qbtn" data-href="https://linkedin.com/in/pedro-lucas-garcia/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="color:#0a66c2"></i></button>
+      </div>
+      <span class="task-sep" aria-hidden="true"></span>
+      <div id="tasks" class="tasks" aria-label="Janelas abertas" data-i18n-attr="aria-label:aTasks"></div>
+      <div class="tray">
+        <span class="avail" title="Disponível para estágio curricular" data-i18n-attr="title:aAvail"><i></i><span data-i18n="avail">Disponível para estágio</span></span>
+        <span data-ico="globe" data-size="16" title="Ligado à Internet" data-i18n-attr="title:aOnline"></span>
+        <time id="clock"></time>
+      </div>
     </footer>
+  </main>
 
-    <!--Footer - Mobile-->
-    <footer id="footer-mobile">
-        <p class="footer-copy">Copyright &#169; 2026 Pedro Lucas, Todos os direitos reservados</p>
-    </footer>
+  <!-- 5. Desligar -->
+  <section id="off" class="screen off" hidden>
+    <div>
+      <p data-i18n="offMsg">Agora pode desligar o computador em segurança.</p>
+      <small data-i18n="offHint">Clique em qualquer lado para voltar a ligar</small>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <script src="projects.js?v=3"></script>
+  <script src="script.js?v=4"></script>
+  <script src="games.js?v=4"></script>
 </body>
 </html>
